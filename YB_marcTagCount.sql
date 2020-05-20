@@ -1,6 +1,7 @@
 /* This query counts the number of occurences for each MARC field where the own code is equal to YB. 
 In other words, this coulds the number of occurences for all Yiddish Book Center MARC fields in their bibliographic records.
-The query orders the results by the MARC tag.
+The query orders the results by the MARC tag. It uses the Aleph MARC reporting table z00r and a table created by Steve Bischoff to get the
+suppressed or not status.
 */
 SELECT
     substr(h1.z00r_field_code, 1, 3),
